@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="NewPage1"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F5F5F5">
+
+    <VerticalStackLayout Padding="30"
+                         Spacing="15"
+                         VerticalOptions="Center">
+        <Label Text="Sobre o Aplicativo"
+               FontFamily="PlayfairItalic"
+               FontSize="40"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#1E3A5F"/>
+
+        <Label Text="Desenvolvedor: Pedro Henrique Rodrigues Gonçalves"
+               TextColor="#1E3A5F"/>
+
+        <Label Text="Ano: 2026"
+               TextColor="#1E3A5F"/>
+
+        <Label Text="Versão: 1.0"
+               TextColor="#1E3A5F"/>
+
+        <Label Text="Aplicativo desenvolvido para gerenciamento e contratação de hospedagens."
+               TextColor="#1E3A5F"/>
+
+        <Button Text="Voltar"
+        BackgroundColor="{StaticResource SecondaryDarkText}"
+        TextColor="White"
+        CornerRadius="10"
+        Clicked="Voltar_Clicked"/>
+
+    </VerticalStackLayout>
+    
+</ContentPage>
