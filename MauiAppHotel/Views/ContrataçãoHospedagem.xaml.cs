@@ -1,4 +1,3 @@
-using MauiAppHotel.Views;
 
 namespace MauiAppHotel.Views;
 
