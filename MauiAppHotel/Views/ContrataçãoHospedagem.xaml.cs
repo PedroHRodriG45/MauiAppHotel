@@ -23,10 +23,16 @@ public partial class ContrataçãoHospedagem : ContentPage
         await Navigation.PushAsync(new Sobre());
     }
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
         try
         {
+            if (pck_quarto.SelectedItem == null)
+            {
+                await DisplayAlert("Erro", "Selecione um quarto", "OK");
+
+                return;
+            }
             Navigation.PushAsync(new HospedagemContratada());
         } catch (Exception ex) 
         {
