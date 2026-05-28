@@ -5,8 +5,9 @@
              Title="ContrataçãoHospedagem"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#EAF4F4">
+    
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
-                         Padding="10">
+                         Padding="10" Spacing="10">
         <Label 
             Text="Cálculo da Diária"
             FontFamily="Kalam"
@@ -54,25 +55,41 @@
 
                 </Grid>
 
-                <Label Text="Escolha sua Suíte"/>
+                <Frame Padding="10"
+                       Margin="10"
+                       BackgroundColor="#EAF4F4">
+                    <VerticalStackLayout>
 
-                <Picker x:Name="pck_quarto"
-                        Title="Selecione sua Acomodação"
-                        ItemDisplayBinding="{Binding Descricao}"/>
+                        <Label Text="Escolha sua Suíte"
+                               TextTransform="Uppercase"
+                               FontSize="Subtitle"
+                               TextColor="{StaticResource Primary}"/>
+
+                        <Picker x:Name="pck_quarto"
+                                Title="Selecione sua Acomodação"
+                                ItemDisplayBinding="{Binding Descricao}"/>
+
+                    </VerticalStackLayout>
+
+                </Frame>
 
                 <Frame Padding="10"
-                       Margin="10">
-                    <VerticalStackLayout>
-                        <Label Text="Período da Estadia" />
+                       Margin="10"
+                       BackgroundColor="#EAF4F4">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="Período da Estadia"
+                               TextTransform="Uppercase"
+                               FontSize="Subtitle"
+                               TextColor="{StaticResource Primary}"/>
 
-                        <HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-in:" />
                             <DatePicker x:Name="dtpck_checkin"
                                         DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
                         
-                        <HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-out:" />
                             <DatePicker x:Name="dtpck_checkout"
                                         Format="dd/MM/yyyy" />
@@ -81,6 +98,7 @@
                 </Frame>
 
                 <Button Text="Reservar"
+                        HorizontalOptions="Center"
                         Clicked="Button_Clicked"
                         BackgroundColor="#1D3557"
                         TextColor="White" />
